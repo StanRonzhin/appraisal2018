@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.8.6/showdown.min.js"></script>
+</head>
+<body>
+<script type="text/javascript" src="js/sankeyvis.js"></script>
+
+<div id="targetDiv"></div>>
+
+
+    <script type="text/javascript">
+        var converter = new showdown.Converter();
+        var md = '[**Showdown**](http://www.showdownjs.com) is *great*\n' +
+            'because:\n\n' +
+            ' - it\'s easy to use\n' +
+            ' - it\'s extensible\n' +
+            ' - works in the server and in the browser' +
+            ' <div id="sankey_basic" style="width: 900px; height: 300px;"></div> ';
+        var html = converter.makeHtml(md);
+        var target = document.getElementById('targetDiv');
+        target.innerHTML = html;
+    </script>
+
+
+
+</body>
+</html>
